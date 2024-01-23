@@ -27,12 +27,13 @@ namespace SistemaEstacionamento.Models
             // Pedir para o usuário digitar a placa e armazenar na variável placa
             string placa = Console.ReadLine();
 
+
             // Verifica se o veículo existe
             if (veiculos.Any(x => x == placa.ToUpper()))
             {
+                // Pedir para o usuário digitar a quantidade de horas que o veículo permaneceu estacionado
                 Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
 
-                // Pedir para o usuário digitar a quantidade de horas que o veículo permaneceu estacionado,
                 // Realizar o seguinte cálculo: "precoInicial + precoPorHora * horas" para a variável valorTotal                
                 int horas = Convert.ToInt32(Console.ReadLine());
                 decimal valorTotal = precoInicial + (precoPorHora * horas);
